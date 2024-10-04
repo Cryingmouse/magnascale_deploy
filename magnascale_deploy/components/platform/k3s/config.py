@@ -13,7 +13,7 @@ class K3sConfig(ABC):
         self.current_config = current_config
 
     @abstractmethod
-    def apply(self, version: str = None):
+    def apply(self):
         pass
 
 
@@ -25,7 +25,7 @@ class DSMConfig(K3sConfig):
         current_config = {"setting1": "dsm_value1", "setting2": "dsm_value2"}
         super().__init__(history_configs, current_config)
 
-    def apply(self, version: str = None):
+    def apply(self):
         # Implementation for DSM apply method
         pass
 
@@ -36,7 +36,7 @@ class CockpitConfig(K3sConfig):
         current_config = {"setting1": "cockpit_value1", "setting2": "cockpit_value2"}
         super().__init__(history_configs, current_config)
 
-    def apply(self, version: str = None):
+    def apply(self):
         # Implementation for Cockpit apply method
         pass
 
@@ -47,6 +47,6 @@ class SmartIQConfig(K3sConfig):
         current_config = {"setting1": "smartiq_value1", "setting2": "smartiq_value2"}
         super().__init__(history_configs, current_config)
 
-    def apply(self, version: str = None):
+    def apply(self):
         # Implementation for SmartIQ apply method
         pass
